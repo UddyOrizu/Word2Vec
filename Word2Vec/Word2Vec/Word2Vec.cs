@@ -89,8 +89,10 @@ class word2vec
                    where w.Value < MinCount
                    select w.Key).ToList();
         foreach (var key in tmp)
+        {
             vocab.Remove(key);
-        Console.WriteLine("Vocab size: { 0}", vocab.Count);
+        }
+        Console.WriteLine("Vocab size: {0}", vocab.Count);
     }
     private void InitUnigramTable()
     {
